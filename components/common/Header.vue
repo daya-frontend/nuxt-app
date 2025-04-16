@@ -1,3 +1,10 @@
+<template>
+  <header>
+    <h1>Header</h1>
+    <CommonGnb />
+  </header>
+</template>
+
 <style lang="scss">
 header {
   position: sticky;
@@ -10,10 +17,3 @@ header {
   }
 }
 </style>
-
-<template>
-  <header>
-    <h1>Header</h1>
-    <CommonGnb />
-  </header>
-</template>

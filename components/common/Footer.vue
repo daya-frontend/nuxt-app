@@ -1,3 +1,7 @@
+<template>
+  <footer><h1>Footer</h1></footer>
+</template>
+
 <style lang="scss">
 footer {
   background: $gray-50;
@@ -5,7 +9,3 @@ footer {
   text-align: center;
 }
 </style>
-
-<template>
-  <footer><h1>Footer</h1></footer>
-</template>

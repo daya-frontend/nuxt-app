@@ -1,3 +1,22 @@
+<script setup lang="ts" :>
+import { gnb } from "@data/gnb";
+</script>
+
+<template>
+  <nav class="gnb">
+    <ul>
+      <li v-for="menu in gnb" :key="menu.path">
+        <NuxtLink
+          :to="menu.path"
+          class="gnb__link"
+          active-class="gnb__link--active"
+          >{{ menu.name }}
+        </NuxtLink>
+      </li>
+    </ul>
+  </nav>
+</template>
+
 <style lang="scss">
 .gnb {
   background: $gray-60;
@@ -14,33 +33,3 @@
   }
 }
 </style>
-
-<template>
-  <nav class="gnb">
-    <ul>
-      <li>
-        <NuxtLink to="/" class="gnb__link" active-class="gnb__link--active">
-          메인
-        </NuxtLink>
-      </li>
-      <li>
-        <NuxtLink
-          to="/board"
-          class="gnb__link"
-          active-class="gnb__link--active"
-        >
-          게시판
-        </NuxtLink>
-      </li>
-      <li>
-        <NuxtLink
-          to="/error"
-          class="gnb__link"
-          active-class="gnb__link--active"
-        >
-          에러페이지
-        </NuxtLink>
-      </li>
-    </ul>
-  </nav>
-</template>
