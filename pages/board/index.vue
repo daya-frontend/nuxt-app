@@ -1,5 +1,5 @@
 <template>
   <div>
-    <button>버튼</button>
+    <h1>게시판입니다</h1>
   </div>
 </template>

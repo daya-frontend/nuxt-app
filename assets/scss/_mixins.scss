@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+@mixin clear-fix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/// Add safe area inset to any direction
+/// @param {String} $direction - top | right | bottom | left
+/// @param {Length} $base - optional base padding
+@mixin safe-area($direction, $base: 0px) {
+  @if $direction == top {
+    padding-top: calc(#{$base} + env(safe-area-inset-top));
+  } @else if $direction == right {
+    padding-right: calc(#{$base} + env(safe-area-inset-right));
+  } @else if $direction == bottom {
+    padding-bottom: calc(#{$base} + env(safe-area-inset-bottom));
+  } @else if $direction == left {
+    padding-left: calc(#{$base} + env(safe-area-inset-left));
+  }
+}
+
+@mixin ellipsis($lines: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if $lines == 1 {
+    display: block;
+    white-space: nowrap;
+  } @else {
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+  }
+}
+
+@mixin blind {
+  position: absolute !important;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin hide-scroll {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin bullet($shape: circle) {
+  position: relative;
+  padding-left: 10px;
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    content: "";
+    display: inline-block;
+    @if $shape == circle {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #999;
+    }
+    @if $shape == dash {
+      width: 6px;
+      height: 1px;
+      background-color: #999;
+    }
+  }
+}
+
+/* sprite image
+   : 경로를 분리할지 고정할지 고민됨. 어떤게 편할까여!? */
+
+@mixin sprite($url, $repeat: no-repeat, $position: 0 0) {
+  background-image: url("#{$url}");
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: 500px auto;
+}

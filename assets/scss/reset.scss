@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+@use "./variables" as *;
+@use "./mixins" as *;
+
+/* ------------------------------
+   기본 Reset
+------------------------------ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "SpoqaHanSansNeo", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.5;
+  color: $black;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background-color: none;
+  word-break: keep-all;
+}
+
+/* ------------------------------
+   Typography
+------------------------------ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  margin: 0;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+  max-height: 999999px;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:focus-visible {
+    outline: 3px solid #f1cc2f;
+    z-index: 20;
+  }
+}
+
+em {
+  font-weight: 700;
+}
+
+/* ------------------------------
+   Forms
+------------------------------ */
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  height: 40px;
+  padding: 10px 15px;
+  border: 1px solid #d1d7e2;
+  font-size: 14px;
+  background: #fff;
+  color: $black;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #777;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="search"]::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  transition: background-color 9999s ease-out;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+/* ------------------------------
+   Table
+------------------------------ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+th,
+td {
+  vertical-align: middle;
+}
+
+/* ------------------------------
+   Media & Misc
+------------------------------ */
+
+img {
+  display: block;
+  width: 100%;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  background: #ccc;
+  margin: 0;
+  border: 0;
+}
+
+::selection {
+  background: #000;
+  color: #f8f9fa;
+}
+::-moz-selection {
+  background: #000;
+  color: #f8f9fa;
+}

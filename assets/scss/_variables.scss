@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+$safeTop: env(safe-area-inset-top);
+$safeBottom: env(safe-area-inset-bottom);
+$h100: var(--innerHeight);
+
+/* Project Setting */
+$min-width: 1200px;
+
+/* Color */
+$white: #fff;
+$black: #000;
+
+$gray-10: #fafafa;
+$gray-20: #f7f7f7;
+$gray-30: #eee;
+$gray-40: #ddd;
+$gray-50: #bbb;
+$gray-60: #888;
+$gray-70: #444;
+
+$images: "@/assets/images";
