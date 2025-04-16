@@ -1,13 +1,13 @@
 <template>
-  <div class="inner">
+  <div class="inner--full">
     <slot />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.inner {
-  min-width: $min-width;
-  width: $min-width;
+.inner--full {
+  min-width: $max-width;
+  width: $max-width;
   margin: 0 auto;
 }
 </style>

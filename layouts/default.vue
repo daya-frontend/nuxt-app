@@ -11,9 +11,7 @@
   <div class="layout-wrap">
     <CommonHeader />
     <CommonContainer>
-      <LayoutInner>
-        <slot />
-      </LayoutInner>
+      <slot />
     </CommonContainer>
     <CommonFooter />
   </div>
