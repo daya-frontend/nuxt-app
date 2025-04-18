@@ -1,7 +1,19 @@
+<script setup>
+import { ref } from "vue";
+const gnb = ref(false);
+const showGnb = () => {
+  gnb.value = true;
+};
+const hideGnb = () => {
+  gnb.value = false;
+};
+</script>
+
 <template>
-  <header>
+  <header @mouseover="showGnb" @mouseout="hideGnb">
     <h1>Header</h1>
-    <CommonGnb />
+    <CommonGnb v-show="gnb" />
+    {{ gnb }}
   </header>
 </template>
 
