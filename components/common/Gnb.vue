@@ -19,7 +19,12 @@ import { gnb } from "@data/gnb";
 
 <style lang="scss">
 .gnb {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
   background: $gray-60;
+  transform: translateY(100%);
   & > ul {
     display: flex;
     justify-content: center;
